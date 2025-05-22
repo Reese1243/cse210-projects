@@ -24,8 +24,6 @@ class Program
             {
                 case 1:
                     newEntry.CreateEntry();
-                    journal._entries.Add(newEntry._prompt);
-                    journal._entries.Add(newEntry._response);
                     unsavedEntry = journal.ConvertToString();
                     break;
 
