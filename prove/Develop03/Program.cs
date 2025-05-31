@@ -10,7 +10,7 @@ class Program
         // string randomWord = exampleinstant.GetRandomWord(test);
         //Console.WriteLine(randomWord);
         //Console.WriteLine(exampleinstant.CensorWord(randomWord));
-        string fullScripture = "Proverbs 3:5-6; Trust in the Lord with all thine heart and lean not unto thine own understanding; in all thy ways acknowledge him, and he shall direct thy paths.";
+        string fullScripture = "Proverbs 3:5-6 Trust in the Lord with all thine heart and lean not unto thine own understanding; in all thy ways acknowledge him, and he shall direct thy paths.";
         ScriptureReference scripturetest = new ScriptureReference();
         List<string> verseList = new List<string>();
         verseList = scripturetest.GetVerse(fullScripture);
@@ -18,7 +18,7 @@ class Program
         {
             Console.Write(item + " ");
         }
-        //Console.WriteLine(scripturetest.GetReference(fullScripture));
+        Console.WriteLine(scripturetest.GetReference(fullScripture));
 
 
 

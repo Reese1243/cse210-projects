@@ -8,13 +8,13 @@ class ScriptureReference
     private string SplitReference(String scripture)
     {
         List<string> scriptureParts = new List<string>();
-        string[] parts = scripture.Split(";");
+        string[] parts = scripture.Split(" ");
         foreach (string part in parts)
         {
             scriptureParts.Add(part);
         }
-
-        return scriptureParts[0];
+        string reference = scriptureParts[0] + " " + scriptureParts[1];
+        return reference;
 
     }
 
