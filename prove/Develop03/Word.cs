@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 
 class Word
 {
-    string _word;
+    private string _word;
 
     //gets a random word from a list of strings
     public string GetRandomWord(List<string> wordList)

@@ -26,7 +26,7 @@ class ScriptureReference
         string[] parts = scripture.Split(" ");
         foreach (string part in parts)
         {
-            scriptureParts.Add(part);
+            scriptureParts.Add(part + " ");
         }
         scriptureParts.RemoveAt(0);
         scriptureParts.RemoveAt(0);
@@ -35,32 +35,42 @@ class ScriptureReference
         return scriptureParts;
     }
 
-    public string GetReference(string scripture)
+    public string ListToString(List<string> list)
+    {
+        string newString = "";
+        foreach (string item in list)
+        {
+            newString = item + " ";
+        }
+        return newString;
+    }
+
+    public void SetReference(string scripture)
     {
         string reference = SplitReference(scripture);
-        return reference;
-    }
-
-    public List<string> GetVerse(string scripture)
-    {
-        List<string> verse = new List<string>();
-        verse = SplitVerse(scripture);
-        return verse;
-    }
-
-    public void SetReference(string reference)
-    {
         _reference = reference;
     }
 
-    public void SetVerse(List<string> verse)
+    public void SetVerse(string scripture)
     {
+        List<string> verse = new List<string>();
+        verse = SplitVerse(scripture);
         _verse = verse;
+    }
+
+    public string GetReference()
+    {
+        return _reference;
+    }
+
+    public List<string> GetVerse()
+    {
+        return _verse;
     }
 
     public void DisplayVerseAndReference()
     {
-        Console.WriteLine(_reference);
+        Console.Write(_reference);
         foreach (string part in _verse)
         {
             Console.Write(part);
