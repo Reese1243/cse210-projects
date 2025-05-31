@@ -3,7 +3,6 @@ using System.Security.Cryptography;
 class Word
 {
     string _word;
-    bool _isHidden;
 
     //gets a random word from a list of strings
     public string GetRandomWord(List<string> wordList)
@@ -32,7 +31,6 @@ class Word
     public void SetWord(string word)
     {
         _word = word;
-        _isHidden = true;
     }
 
     // displays the _word attribute
@@ -40,7 +38,5 @@ class Word
     {
         Console.WriteLine(_word);
     }
-
-
 
 }
