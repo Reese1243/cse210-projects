@@ -4,6 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning04 World!");
+        MathAssignment mathAssignment = new MathAssignment("Reese", "Multiplication", "1.2", "10-56");
+        mathAssignment.GetSummary();
+        mathAssignment.GetHomeworkList();
+
+        WritingAssignments writingAssignment = new WritingAssignments("Reese", "Instructional Writing", "Coding for newbs");
+        writingAssignment.GetSummary();
+        writingAssignment.GetWritingInfo();
+
+        
     }
 }
