@@ -30,17 +30,28 @@ class Program
             return Math.PI * _radius * _radius;
         }
     }
-  
+
     static void Main(string[] args)
     {
-        //Console.WriteLine("hi");
-        Circle myCircle = new Circle();
-        Circle myCircle2 = new Circle();
-        myCircle.SetRadius(10);
-        Console.WriteLine($"{myCircle.GetRadius()}");
+        int sleepTime = 250;
+        DateTime currentTime = DateTime.Now;
+        DateTime endTime = currentTime.AddSeconds(20);
 
-        myCircle2.SetRadius(20);
-        Console.WriteLine($"{myCircle2.GetArea()}");
+        while (DateTime.Now < endTime)
+        {
+            Thread.Sleep(sleepTime);
+            Console.Write(".");
+            Console.Write("\b");
+            Thread.Sleep(sleepTime);
+            Console.Write("o");
+            Console.Write("\b");
+            Thread.Sleep(sleepTime);
+            Console.Write("O");
+            Console.Write("\b");
+            Thread.Sleep(sleepTime);
+            Console.Write("0");
+            Console.Write("\b");
+        }
 
     }
 
